@@ -721,7 +721,7 @@ const pets = {
     { type: 'dog', name: '狗舍', x: 205, y: -60, roof: '#C2473A', roofSh: '#9C362B', bump: 0, shake: 0 },
   ],
   tufts: Array.from({ length: 70 }, () => ({ x: rnd() * 2 - 1, y: rnd(), k: rnd() })),
-  bounds() { return { xm: clamp(this.vw - 60, 240, 430), y0: 34, y1: clamp(this.vh - 50, 200, 262) }; },
+  bounds() { return { xm: clamp(this.vw - 60, 240, 430), y0: 34, y1: clamp(this.vh - 60, 200, 520) }; },
   spawn(inside) {
     const b = this.bounds(), type = Math.random() < .5 ? 'cat' : 'dog';
     const a = { type, c: PET[type][Math.random() * 4 | 0], x: 0, y: 0, dir: 1, ph: Math.random() * 6, s: 1, z: 0, rot: 0, wait: 0, t: 0, state: 'walk',
